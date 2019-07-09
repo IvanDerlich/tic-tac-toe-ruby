@@ -7,7 +7,6 @@ class Board
     def tic(position,symbol)              
         @state[position.to_i] = symbol 
         
-        #<comment>
         check = check(1,5,9)
         return check if check != 0
         check = check(7,5,3)
@@ -24,7 +23,6 @@ class Board
         return check if check != 0
         check = check(9,6,3) 
         return check if check != 0        
-        #</comment> If you know how to do this better, please e-mail me at a@ivanderlich.com
         
         check
     end
@@ -37,8 +35,8 @@ class Board
 
     def check(pos1,pos2,pos3)
         if @state[pos1] ==  @state[pos2] &&  @state[pos2] == @state[pos3]  
-            return 1 if @state[pos2] == "x"
-            return 2 if @state[pos2] == "o"
+            return player1.number if @state[pos2] == player1.symbol
+            return player2.number if @state[pos2] == player2.symbol
         end   
         0
     end
