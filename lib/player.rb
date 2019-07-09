@@ -1,6 +1,12 @@
+require_relative 'validations.rb'
+
 class Player
-    attr_accessor :symbol, :name
+    attr_reader :symbol, :number
+
     def initialize(symbol, number)
+        validations = Validations.new
+        validations.symbol(symbol)        
+        
         @symbol = symbol
         @number = number
     end

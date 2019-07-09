@@ -1,7 +1,5 @@
 require_relative 'board.rb'
-require_relative 'validations.rb'
 require_relative 'player.rb'
-require_relative '../graphics/errors.rb'
 require_relative '../graphics/interface.rb'
 
 
@@ -11,8 +9,6 @@ class Game
         @board = Board.new  
         @player1 = Player.new('x', 1)
         @player2 = Player.new('o', 2)
-        @validate = Validations.new 
-        @error = Errors.new
         @interface = Interface.new
     end     
 
@@ -30,30 +26,32 @@ class Game
         move(symbol2) 
         move(symbol1)        
         @interface.stalemate(@board)
+        exit
     end 
 
-    def move(symbol)   
+    private
 
-        symbol_error = @validate.Symbol(symbol)
-        return symbol_error  if symbol_error  < 0        
+    def move(symbol)  
+        position = @interface.ask_input(@board,symbol)
+        winner_symbol = @board.tic(position,symbol) 
+        if winner_symbol
+            winner_number = winner_number(winner_symbol) 
+            @interface.victory(@board,winner_number) 
+            exit
+        end                   
+    end
 
-        validMoveFlag = false
-        
-        while(validMoveFlag == false)
-
-            @interface.ask_input(@board,symbol)
-
-            error_nr = validatePosition(position,@board) !=0
-
-            if(error_nr != 0 )
-                @error.handling(error_nr)
+    def winner_number(winner_symbol)
+        if winner_symbol == @player1.symbol || winner_symbol == @player2.symbol
+            if @player1.symbol == winner_symbol
+                winner_number = @player1.number 
+            elsif @player2.symbol == winner_symbol
+                winner_number = @player2.number 
             else
-                winner = @board.tic(position,symbol) 
-                @interface.victory(@board,victor) if winner == @player1.number || winner == player2.number
-                validMoveFlag = true
-            end             
+                puts "Never should have reached this line of code"
+                exit
+            end   
         end
-
     end
 
 end

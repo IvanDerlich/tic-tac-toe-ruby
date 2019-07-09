@@ -1,14 +1,34 @@
+require_relative '../graphics/errors'
+
 class Validations
-    def Symbol(symbol)
-        return -2 if symbol != "x" && symbol != "o"                 
-        0
+    def initialize
+        @errors = Errors.new
     end
-    def Position(position,board)
-        return 20 unless position.is_a? Integer       
-        return 21 if position > 9        
-        return 22 if position < 1
-        return 23 if board.get(position) == 'x' || board.get(position) == 'o'
-        return 24 if position.nil?
-        0   
+
+    def symbol(symbol)
+        @errors(-2) if symbol != "x" || symbol != "o"                         
     end
-end
+
+    def inputed_position(inputed)  
+        return 21 if inputed > 9        
+        return 22 if inputed < 1   
+    end
+
+    def free_position(actual)
+        return 33 if actual == 'x' || actual == 'o' 
+    end
+
+    def valid_position(inputed)
+        error1 = inputed_position(inputed)                
+        unless error1                        
+            error2 = @validations.free_position(board.state[inputed_position])
+            unless error2
+                valid_position = true
+            else
+                @errors.handling(error2) 
+            end
+        else
+            @errors.handling(error1)
+        end  
+    end
+end 

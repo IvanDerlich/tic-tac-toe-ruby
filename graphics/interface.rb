@@ -1,35 +1,47 @@
+require_relative '../lib/validations'
+
 class Interface
+    def initialize
+         @validations = Validations.new
+         @errors = Errors.new
+    end        
 
     def show(board)
         puts ""
-        puts " #{board.get(1)} | #{board.get(2)} | #{board.get(3)} "
+        puts " #{board.state[1]} | #{board.state[2]} | #{board.state[3]} "
         puts "---|---|---"
-        puts " #{board.get(4)} | #{board.get(5)} | #{board.get(6)} "
+        puts " #{board.state[4]} | #{board.state[5]} | #{board.state[6]} "
         puts "---|---|---"      
-        puts " #{board.get(7)} | #{board.get(8)} | #{board.get(9)} "
+        puts " #{board.state[7]} | #{board.state[8]} | #{board.state[9]} "
     end
 
-    def ask_input(board,symbol)
-        show(board)
-        puts "#{symbol}'s turn..."           
-        position = gets.chomp.to_i
+    def ask_input(board,symbol)        
+        valid_position = false
+        while valid_position == false
+            show(board)
+            puts "#{symbol}'s turn..."   
+            position = gets.chomp.to_i            
+            valid_position = @validations.inputed_position(position)                          
+        end  
+        inputed_position
     end
 
     def welcome
-        p "---Welcome to Tic Tac Toe---"
+        puts "---Welcome to Tic Tac Toe---"
+        puts "---Made by Ivan Derlich---"
+        puts "---Check: ivanderlich.com---"
     end
 
     def victory(board,winner)
         show(board)
-        p "\n----Player #{winner} wins----" 
-        p "\n----The game ends----" 
-        exit
+        puts "\n----Player #{winner} wins----" 
+        puts "\n----The game ends----"         
     end
 
     def stalemate(board)
         show(board)
-        p "\nIt's a stalemate" 
-        p "\n----The game ends----" 
-        exit
+        puts "\nIt's a stalemate" 
+        puts "\n----The game ends----" 
+        
     end
 end
