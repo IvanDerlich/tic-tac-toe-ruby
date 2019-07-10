@@ -1,4 +1,4 @@
-require_relative '../graphics/errors'
+require_relative '../graphics/errors.rb'
 
 class Validations
     def initialize
@@ -6,7 +6,7 @@ class Validations
     end
 
     def symbol(symbol)
-        @errors(-2) if symbol != "x" || symbol != "o"                         
+        @errors.handling(-2) if symbol != "x" && symbol != "o"                         
     end
 
     def inputed_position(inputed)  
@@ -18,10 +18,10 @@ class Validations
         return 33 if actual == 'x' || actual == 'o' 
     end
 
-    def valid_position(inputed)
+    def valid_position(board,inputed)
         error1 = inputed_position(inputed)                
-        unless error1                        
-            error2 = @validations.free_position(board.state[inputed_position])
+        unless error1                             
+            error2 = free_position(board.state[inputed] )
             unless error2
                 valid_position = true
             else

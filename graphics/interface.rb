@@ -15,33 +15,38 @@ class Interface
         puts " #{board.state[7]} | #{board.state[8]} | #{board.state[9]} "
     end
 
-    def ask_input(board,symbol)        
-        valid_position = false
-        while valid_position == false
+    def ask_input(board,symbol)  
+        valid_position = nil
+        until valid_position
             show(board)
             puts "#{symbol}'s turn..."   
             position = gets.chomp.to_i            
-            valid_position = @validations.inputed_position(position)                          
-        end  
-        inputed_position
+            valid_position = @validations.valid_position(board,position)                          
+        end 
+        position
     end
 
     def welcome
-        puts "---Welcome to Tic Tac Toe---"
-        puts "---Made by Ivan Derlich---"
-        puts "---Check: ivanderlich.com---"
+        credits
+        puts "---Welcome to Tic Tac Toe---"        
     end
 
     def victory(board,winner)
         show(board)
         puts "\n----Player #{winner} wins----" 
         puts "\n----The game ends----"         
+        credits
     end
 
     def stalemate(board)
         show(board)
         puts "\nIt's a stalemate" 
-        puts "\n----The game ends----" 
-        
+        puts "\n----The game ends----"         
+        credits
+    end
+
+    def credits
+        puts "---Made by Ivan Derlich---"
+        puts "---Check: ivanderlich.com---"
     end
 end
