@@ -4,7 +4,15 @@ This is a Tic Tac Toe Game
 
 https://en.wikipedia.org/wiki/Tic-tac-toe
 
-## How to play it
+## How to play it on the web
+
+-Go to: https://repl.it/@IvanDerlich/Tic-Tac-Toe-1
+
+-Click on the run button
+
+-Enjoy
+
+## How to play it on your computer
 
 -If you don't have ruby installed, then install it:
 
