@@ -31,4 +31,5 @@ class Validations
             @errors.handling(error1)
         end  
     end
+    
 end 
