@@ -38,6 +38,12 @@ https://www.theodinproject.com/courses/ruby-programming/lessons/oop
 
 Which is a part of the Microverse program I'm attending by the time of writting this code.
 
+## Testing
+
+The testing in this project is done as a part of another project
+
+https://github.com/IvanDerlich/Rspec
+
 ## Contributors
 
 [Ivan](https://github.com/IvanDerlich)
