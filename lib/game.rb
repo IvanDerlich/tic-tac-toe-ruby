@@ -5,6 +5,8 @@ require_relative '../graphics/interface.rb'
 
 class Game
 
+    attr_reader :interface, :board
+
     def initialize        
         @board = Board.new  
         @player1 = Player.new('x', 1)
@@ -27,15 +29,16 @@ class Game
         end
 
         if winner_symbol
-            winner_number = winner_number(winner_symbol) 
-            @interface.victory(@board,winner_number)             
-        else
-            @interface.stalemate(@board)
+            winner_number = winner_number(winner_symbol)
+            @interface.victory(@board,winner_number)                        
+        else            
+            @interface.stalemate(@board) 
         end 
-        
-    end 
+    end  
 
-    private
+    def test
+        variable = gets.chomp
+    end
 
     def move(symbol)  
         position = @interface.ask_input(@board,symbol)
@@ -43,6 +46,8 @@ class Game
         @moves += 1         
         winner_symbol
     end
+
+    private
 
     def winner_number(winner_symbol)
         if winner_symbol == @player1.symbol || winner_symbol == @player2.symbol
@@ -54,4 +59,7 @@ class Game
         end
     end
 
+    
+
+    
 end

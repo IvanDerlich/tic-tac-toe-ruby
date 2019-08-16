@@ -3,7 +3,7 @@ class Board
     attr_reader :state
 
     def initialize
-        @state = ["", 1, 2, 3, 4, 5, 6, 7, 8, 9]        
+        @state = ["", 1, 2, 3, 4, 5, 6, 7, 8, 9]
     end    
 
     def tic(position,symbol)
@@ -14,4 +14,7 @@ class Board
     def check(pos1,pos2,pos3)
         return true if @state[pos1] ==  @state[pos2] &&  @state[pos2]  == @state[pos3]              
     end
+
+
+    
 end
