@@ -22,7 +22,7 @@ https://www.ruby-lang.org/en/documentation/installation/
 
 git clone git@github.com:IvanDerlich/Tictactoe.git
 
-It will generate a folder named "TicTacToe".
+It will generate a folder named "TicTacToe". 
 
 -Move to that folder and then run:
 

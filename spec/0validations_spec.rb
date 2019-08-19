@@ -45,10 +45,4 @@ context "validations" do
             expect(validation.free_position(9)).to be_nil
         end 
     end
-
-
-    describe "valid_position" do
-        xit "" do
-        end 
-    end
 end
