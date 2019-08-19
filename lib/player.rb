@@ -5,8 +5,13 @@ class Player
 
     def initialize(symbol, number)
         validations = Validations.new        
-        validations.symbol(symbol)  
-        @symbol = symbol
+        error_code = validations.symbol(symbol)
+        if error_code
+            Errors.new.handling(error_code)
+            return false
+        end
+        @symbol = symbol        
         @number = number
+        true
     end
 end

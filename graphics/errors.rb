@@ -1,5 +1,5 @@
 class Errors
-    def handling(code)        
+    def handling(code)      
         puts "Input error number #{code}:"
         case code
         when -2

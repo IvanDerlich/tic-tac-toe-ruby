@@ -81,9 +81,7 @@ describe "tic" do
     end
 
     context "When multiple tics with different endings" do
-        before do              
-            board.instance_variable_set(:@state, ["", "o", 2, "x", 4, "x", 6, "o", 8, 9])          
-        end
+        let(:board){Board.new}
 
         it "stalemate" do
             board.tic(5,"x")
@@ -93,24 +91,33 @@ describe "tic" do
             expect(board.tic(9,"x")).to be_nil
         end
 
-        xit "tests_state" do
+        it "tests_state" do
+            board.tic(3,"x")
+            board.tic(7,"o")
+            board.tic(5,"x")            
             expect(board.state).to eql(["", 1, 2, "x", 4, "x", 6, "o", 8, 9])
         end
 
-        xit "tests_state" do
-            expect(board.state).not_to eql(["", "o", 2, "x", 4, "x", 6, "o", 8, 9])
+        it "tests_state" do
+            board.tic(5,"x")
+            board.tic(1,"o")
+            board.tic(3,"x")
+            board.tic(7,"o")
+            expect(board.state).to eql(["", "o", 2, "x", 4, "x", 6, "o", 8, 9])
         end
 
 
         it "Player one wins" do
             board.tic(9,"x")
             board.tic(2,"o")
-            expect(board.tic(6,"x")).to be
+            board.tic(6,"x")
+            expect(board.state).to eql(["", 1, "o", 3, 4, 5, "x", 7, 8, "x"])
         end
 
-        xit "Player two wins" do
+        it "Player two wins" do
             board.tic(9,"x") 
-            expect(board.tic(4,"x")).to be
+            board.tic(4,"x")
+            expect(board.state).to eql(["", 1, 2, 3, "x", 5, 6, 7, 8, "x"])
         end
     end
 

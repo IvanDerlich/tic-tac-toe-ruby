@@ -6,7 +6,7 @@ class Validations
     end
 
     def symbol(symbol)
-        @errors.handling(-2) if symbol != "x" && symbol != "o"                         
+        return -2 if symbol != "x" && symbol != "o"                  
     end
 
     def inputed_position(inputed)  
@@ -15,7 +15,7 @@ class Validations
     end
 
     def free_position(actual)
-        return 33 if actual == 'x' || actual == 'o' 
+        return 33 if actual == 'x' || actual == 'o'       
     end
 
     def valid_position(board,inputed)

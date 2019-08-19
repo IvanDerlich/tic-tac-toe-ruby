@@ -5,12 +5,10 @@ require_relative '../graphics/interface.rb'
 
 class Game
 
-    attr_reader :interface, :board
-
     def initialize        
         @board = Board.new  
-        @player1 = Player.new('x', 1)
-        @player2 = Player.new('o', 2)
+        @player1 = Player.new('x',1)
+        @player2 = Player.new('o',2)
         @interface = Interface.new
         @moves = 0        
     end     
@@ -34,20 +32,16 @@ class Game
         else            
             @interface.stalemate(@board) 
         end 
-    end  
+    end   
 
-    def test
-        variable = gets.chomp
-    end
+    private
 
     def move(symbol)  
         position = @interface.ask_input(@board,symbol)
         winner_symbol = symbol if @board.tic(position,symbol)                         
         @moves += 1         
         winner_symbol
-    end
-
-    private
+    end        
 
     def winner_number(winner_symbol)
         if winner_symbol == @player1.symbol || winner_symbol == @player2.symbol
@@ -59,7 +53,12 @@ class Game
         end
     end
 
-    
+    def get_interface
+        @interface
+    end
 
+    def get_board
+        @board
+    end
     
 end
