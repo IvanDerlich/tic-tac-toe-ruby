@@ -1,9 +1,8 @@
-require './lib/game.rb'
+require_relative "../lib/game.rb"
 
-context "declared game" do
-    let(:game){Game.new}
-    
-    describe "play" do    
+context "Game" do
+    let(:game){Game.new}    
+    describe "play" do  
 
         it "Player one wins" do
             allow(game.send(:get_interface)).to receive(:gets).and_return("1","2","5","8","9")

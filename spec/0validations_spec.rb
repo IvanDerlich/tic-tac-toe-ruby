@@ -1,11 +1,12 @@
-require './lib/validations.rb'
+require_relative "../lib/validations.rb"
 
 #for some reason if I don't prepend 0 to this filename, the tests won't run
 
 context "validations" do
     let(:validation){Validations.new}
+   
     describe "symbol" do
-        it "returns false if symbol is correct" do
+        it "returns nil if symbol is correct" do
             expect(validation.symbol("x")).to be_nil
             expect(validation.symbol("o")).to be_nil            
         end 
