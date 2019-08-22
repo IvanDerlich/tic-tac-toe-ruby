@@ -36,6 +36,7 @@ class Interface
         puts "\n----Player #{winner} wins----" 
         puts "\n----The game ends----"         
         credits
+        winner
     end
 
     def stalemate(board)
@@ -43,6 +44,7 @@ class Interface
         puts "\nIt's a stalemate" 
         puts "\n----The game ends----"         
         credits
+        0
     end
 
     def credits

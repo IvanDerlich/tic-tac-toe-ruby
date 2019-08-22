@@ -22,7 +22,7 @@ https://www.ruby-lang.org/en/documentation/installation/
 
 git clone git@github.com:IvanDerlich/Tictactoe.git
 
-It will generate a folder named "TicTacToe".
+It will generate a folder named "TicTacToe". 
 
 -Move to that folder and then run:
 
@@ -37,6 +37,12 @@ It was done as part of the Odin Project
 https://www.theodinproject.com/courses/ruby-programming/lessons/oop
 
 Which is a part of the Microverse program I'm attending by the time of writting this code.
+
+## Testing
+
+The testing in this project is done as a part of another project
+
+https://github.com/IvanDerlich/Rspec
 
 ## Contributors
 

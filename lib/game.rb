@@ -7,8 +7,8 @@ class Game
 
     def initialize        
         @board = Board.new  
-        @player1 = Player.new('x', 1)
-        @player2 = Player.new('o', 2)
+        @player1 = Player.new('x',1)
+        @player2 = Player.new('o',2)
         @interface = Interface.new
         @moves = 0        
     end     
@@ -27,13 +27,12 @@ class Game
         end
 
         if winner_symbol
-            winner_number = winner_number(winner_symbol) 
-            @interface.victory(@board,winner_number)             
-        else
-            @interface.stalemate(@board)
+            winner_number = winner_number(winner_symbol)
+            @interface.victory(@board,winner_number)                        
+        else            
+            @interface.stalemate(@board) 
         end 
-        
-    end 
+    end   
 
     private
 
@@ -42,7 +41,7 @@ class Game
         winner_symbol = symbol if @board.tic(position,symbol)                         
         @moves += 1         
         winner_symbol
-    end
+    end        
 
     def winner_number(winner_symbol)
         if winner_symbol == @player1.symbol || winner_symbol == @player2.symbol
@@ -54,4 +53,12 @@ class Game
         end
     end
 
+    def get_interface
+        @interface
+    end
+
+    def get_board
+        @board
+    end
+    
 end
