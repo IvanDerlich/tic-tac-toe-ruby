@@ -4,6 +4,16 @@ This is a Tic Tac Toe Game
 
 https://en.wikipedia.org/wiki/Tic-tac-toe
 
+## Demo
+
+![](docs/1.png)<br>
+![](docs/2.png)<br>
+![](docs/3.png)
+
+## Video
+
+[Here](https://youtu.be/p8lbpEYSpKU)
+
 ## How to play it on the web
 
 -Go to: https://repl.it/@IvanDerlich/Tic-Tac-Toe-1
