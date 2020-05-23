@@ -5,7 +5,7 @@ This is a Tic Tac Toe Game
 https://en.wikipedia.org/wiki/Tic-tac-toe
 
 ## Demo
-
+![](doc/../docs/tictactoe-js.gif)<br>
 ![](docs/1.png)<br>
 ![](docs/2.png)<br>
 ![](docs/3.png)
