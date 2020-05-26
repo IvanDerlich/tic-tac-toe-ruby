@@ -28,7 +28,7 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
 
 https://www.ruby-lang.org/en/documentation/installation/
 
--Open you terminal in a folder or your choise and then run:
+-Open your terminal in a folder or your choice and then run:
 
 git clone git@github.com:IvanDerlich/Tictactoe.git
 
@@ -46,7 +46,7 @@ It was done as part of the Odin Project
 
 https://www.theodinproject.com/courses/ruby-programming/lessons/oop
 
-Which is a part of the Microverse program I'm attending by the time of writting this code.
+Wich is a part of the Microverse program I'm attending by the time of writting this code.
 
 ## Testing
 
