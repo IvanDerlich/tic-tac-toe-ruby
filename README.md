@@ -10,7 +10,7 @@ This is a Tic Tac Toe game that you can play in a Unix terminal.
 
 ## Video
 
-[Here](https://youtu.be/p8lbpEYSpKU)
+[Here](https://youtu.be/p8lbpEYSpKU).
 
 ## Play on the web
 
@@ -48,4 +48,4 @@ Wich is a part of the Microverse program I'm attending by the time of writting t
 
 ## Contributors
 
-[Ivan Derlich](https://github.com/IvanDerlich)
+[Ivan Derlich](https://github.com/IvanDerlich).
