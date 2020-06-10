@@ -44,7 +44,7 @@ Enjoy!
 
 I did it as part of [this](https://www.theodinproject.com/courses/ruby-programming/lessons/oop) project.
 
-Wich is a part of the Microverse program I'm attending by the time of writting this code.
+Wich is a part of the Microverse program I'm attending by the time of writing this code.
 
 ## Contributors
 
