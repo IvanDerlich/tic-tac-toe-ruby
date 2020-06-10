@@ -2,8 +2,6 @@
 
 This is a Tic Tac Toe game that you can play in a Unix terminal.
 
-https://en.wikipedia.org/wiki/Tic-tac-toe
-
 ## Demo
 ![](doc/../docs/tictactoe-js.gif)<br>
 ![](docs/1.png)<br>
@@ -14,7 +12,7 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
 
 [Here](https://youtu.be/p8lbpEYSpKU)
 
-## How to play it on the web
+## Play on the web
 
 - Go to: https://repl.it/@IvanDerlich/Tic-Tac-Toe-1.
 
@@ -22,7 +20,7 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
 
 - Enjoy!
 
-## How to play it on your computer
+## Play it on your computer
 
 Install Ruby if you don't have it on your system:
 
@@ -44,7 +42,7 @@ Enjoy!
 
 ## More Info
 
-It was done as part of the Odin Project
+It was done as part of the Odin Project.
 
 https://www.theodinproject.com/courses/ruby-programming/lessons/oop
 
