@@ -46,10 +46,6 @@ I did it as part of [this](https://www.theodinproject.com/courses/ruby-programmi
 
 Wich is a part of the Microverse program I'm attending by the time of writting this code.
 
-## Testing
-
-I did the testing of this project as a part of another project.
-
 ## Contributors
 
 [Ivan Derlich](https://github.com/IvanDerlich)
