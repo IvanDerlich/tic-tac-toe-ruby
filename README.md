@@ -54,4 +54,4 @@ I did the testing of this project as a part of another project.
 
 ## Contributors
 
-[Ivan](https://github.com/IvanDerlich)
+[Ivan Derlich](https://github.com/IvanDerlich)
