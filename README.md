@@ -16,7 +16,7 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
 
 ## How to play it on the web
 
-- Go to: https://repl.it/@IvanDerlich/Tic-Tac-Toe-1
+- Go to: https://repl.it/@IvanDerlich/Tic-Tac-Toe-1.
 
 - Click on the run button.
 
@@ -52,9 +52,7 @@ Wich is a part of the Microverse program I'm attending by the time of writting t
 
 ## Testing
 
-The testing in this project is done as a part of another project
-
-https://github.com/IvanDerlich/Rspec
+I did the testing of this project as a part of another project.
 
 ## Contributors
 
