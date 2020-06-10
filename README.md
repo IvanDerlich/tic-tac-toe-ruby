@@ -16,29 +16,29 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
 
 ## How to play it on the web
 
--Go to: https://repl.it/@IvanDerlich/Tic-Tac-Toe-1
+- Go to: https://repl.it/@IvanDerlich/Tic-Tac-Toe-1
 
--Click on the run button
+- Click on the run button
 
--Enjoy
+- Enjoy
 
 ## How to play it on your computer
 
--If you don't have ruby installed, then install it:
+- If you don't have ruby installed, then install it:
 
 https://www.ruby-lang.org/en/documentation/installation/
 
--Open your terminal in a folder or your choice and then run:
+- Open your terminal in a folder or your choice and then run:
 
 git clone git@github.com:IvanDerlich/Tictactoe.git
 
 It will generate a folder named "TicTacToe". 
 
--Move to that folder and then run:
+- Move to that folder and then run:
 
 ruby main.rb
 
--Enjoy!
+- Enjoy!
 
 ## More Info
 
