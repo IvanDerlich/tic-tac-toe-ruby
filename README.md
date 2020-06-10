@@ -1,6 +1,6 @@
 # Tictactoe
 
-This is a Tic Tac Toe Game
+This is a Tic Tac Toe game that you can play in a Unix terminal.
 
 https://en.wikipedia.org/wiki/Tic-tac-toe
 
@@ -18,27 +18,25 @@ https://en.wikipedia.org/wiki/Tic-tac-toe
 
 - Go to: https://repl.it/@IvanDerlich/Tic-Tac-Toe-1
 
-- Click on the run button
+- Click on the run button.
 
-- Enjoy
+- Enjoy!
 
 ## How to play it on your computer
 
-- If you don't have ruby installed, then install it:
+Install Ruby if you don't have it on your system:
 
 https://www.ruby-lang.org/en/documentation/installation/
 
-- Open your terminal in a folder or your choice and then run:
+Download the repository:
 
-git clone git@github.com:IvanDerlich/Tictactoe.git
+  git clone git@github.com:IvanDerlich/Tictactoe.git
 
-It will generate a folder named "TicTacToe". 
+Move to the folder you just created:
 
-- Move to that folder and then run:
+  ruby main.rb
 
-ruby main.rb
-
-- Enjoy!
+Enjoy!
 
 ## More Info
 
