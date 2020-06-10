@@ -30,11 +30,15 @@ https://www.ruby-lang.org/en/documentation/installation/
 
 Download the repository:
 
-  git clone git@github.com:IvanDerlich/Tictactoe.git
+    git clone git@github.com:IvanDerlich/tic-tac-toe-ruby.git
 
 Move to the folder you just created:
 
-  ruby main.rb
+    cd tic-tac-toe-ruby
+    
+Run the game:
+
+    ruby main.rb
 
 Enjoy!
 
